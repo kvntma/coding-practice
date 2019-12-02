@@ -4,3 +4,4 @@ venv/
 .vscode/
 __pycache__/
 #ignore config files here
+githubcheatsheet.txt
