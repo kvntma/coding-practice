@@ -1,0 +1,6 @@
+#ignore folders here
+venv/
+.idea/
+.vscode/
+__pycache__/
+#ignore config files here

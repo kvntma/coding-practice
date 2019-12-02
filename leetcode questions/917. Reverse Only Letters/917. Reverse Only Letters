@@ -1,0 +1,44 @@
+'''
+class Solution:
+    def reverseOnlyLetters(self, S: str) -> str:
+        lst = list(S)
+        flipped = []
+        stfu_aksh = len(S)-1
+
+        for i in range(len(lst)):
+            print(lst[i])
+            if lst[i].isalpha():
+                while not lst[stfu_aksh].isalpha():
+                    print(lst[stfu_aksh])
+                    stfu_aksh -= 1
+                flipped.append(lst[stfu_aksh])
+                stfu_aksh -= 1
+            else:
+                flipped.append(lst[i])
+        return ''.join(flipped)
+'''
+
+class Solution(object):
+    def reverseOnlyLetters(self, S):
+        ans = []
+        j = len(ans) - 1
+        print(j)
+        for i, x in enumerate(S):
+            if x.isalpha():
+                while not S[j].isalpha():
+                    print(ans)
+                    j -= 1
+                ans.append(S[j])
+                print(ans)
+                j -= 1
+            else:
+                ans.append(x)
+
+        return "".join(ans)
+    def __repr__(self):
+        return repr(self.reverseOnlyLetters())
+
+d = Solution()
+print(repr(d.reverseOnlyLetters("abc-de-f")))
+
+#[:-1] IS THE LAST INDEX IN THE LIST.
