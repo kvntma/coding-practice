@@ -1,0 +1,8 @@
+answer = get_string("What's your name?\n")
+is now
+print("hello, " + answer)
+
+You don't have to tell the computer what kind of variable is put in the values.
+print(f"hello, {answer}")  - you can concactonate using comma and seperates as a string because print takes in multiple values. 
+format string, f string. Tells python PLUG value in that placed between curly braces.
+
