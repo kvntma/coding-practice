@@ -285,11 +285,12 @@ def betRoulette(money):
         if prompt_bet_type == 'q' or prompt_bet_type == "leave":
             return leave_table, money
         elif prompt_bet_type == 'straight' or prompt_bet_type == "1":
-            try:
-                prompt_straight_bet = int(input(
-                    "Please enter a number that is on the roulette board: "))
-            except ValueError():
-                return "You did not enter an amount that was on the roulette board, leaving table and returning to main menu..", money
+            prompt_straight_bet = input(
+                "Please enter a number that is on the roulette board: ")
+            if isNumber(prompt_straight_bet) is False:
+                time.sleep(1)
+                print(
+                    "This wasn't even a number..")
             if prompt_straight_bet in roulette_numbers and num == prompt_straight_bet:
                 rouletteDrop(num)
                 money += (bet_result*35)
