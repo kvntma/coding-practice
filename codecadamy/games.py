@@ -291,12 +291,12 @@ def betRoulette(money):
                 time.sleep(1)
                 print(
                     "This wasn't even a number..")
-            if prompt_straight_bet in roulette_numbers and num == prompt_straight_bet:
+            if int(prompt_straight_bet) in roulette_numbers and num == int(prompt_straight_bet):
                 rouletteDrop(num)
                 money += (bet_result*35)
                 print("YOU HIT THE JACKPOT!!")
                 return winStatement(money, bet_result)
-            if prompt_straight_bet in roulette_numbers:
+            if int(prompt_straight_bet) in roulette_numbers:
                 rouletteDrop(num)
                 money -= (bet_result)
                 return loseStatement(money, bet_result)

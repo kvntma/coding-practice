@@ -3,5 +3,9 @@ venv/
 .idea/
 .vscode/
 __pycache__/
+games_starting
+selfPractice
 #ignore config files here
 githubcheatsheet.txt
+cardDeck.py
+kattis/BusNumbers\ AkshdeepVer.py
