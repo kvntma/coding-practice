@@ -241,6 +241,7 @@ def betRoulette(money):
     bet_result = bet_amount
     roulette_numbers = list(range(37))
     num = random.choice(roulette_numbers)
+    print(num)
     leave_table = "You have left the Roulette Table!"
     print("Welcome to the Roulette Table!")
     time.sleep(1)
@@ -289,8 +290,8 @@ def betRoulette(money):
                 "Please enter a number that is on the roulette board: ")
             if isNumber(prompt_straight_bet) is False:
                 time.sleep(1)
-                print(
-                    "This wasn't even a number..")
+                print("This wasn't even a number..")
+                continue
             if int(prompt_straight_bet) in roulette_numbers and num == int(prompt_straight_bet):
                 rouletteDrop(num)
                 money += (bet_result*35)

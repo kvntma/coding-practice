@@ -3,8 +3,8 @@
 block_cipher = None
 
 
-a = Analysis(['games.py'],
-             pathex=['C:\\Users\\Kevin\\Desktop\\Code\\codingPractice\\codecadamy'],
+a = Analysis(['tower_of_hanoi.py'],
+             pathex=['c:\\Users\\Kevin\\Desktop\\Code\\Coding_Practice\\codecadamy\\Towers_of_Hanoi'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -21,7 +21,7 @@ exe = EXE(pyz,
           a.scripts,
           [],
           exclude_binaries=True,
-          name='games',
+          name='tower_of_hanoi',
           debug=False,
           bootloader_ignore_signals=False,
           strip=False,
@@ -34,4 +34,4 @@ coll = COLLECT(exe,
                strip=False,
                upx=True,
                upx_exclude=[],
-               name='games')
+               name='tower_of_hanoi')
