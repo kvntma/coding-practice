@@ -5,7 +5,7 @@ venv/
 __pycache__/
 games_starting
 selfPractice
-interview_questions
+interview
 #ignore config files here
 githubcheatsheet.txt
 cardDeck.py
