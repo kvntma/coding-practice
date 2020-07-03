@@ -10,7 +10,7 @@ def sentence_counter():
     punctuation = {"!": 0, "?": 0, ".": 0}
     for char in sentence:
         if char in punctuation:
-            punctuation[char] += +1
+            punctuation[char] += 1
     return sum(punctuation.values())
 
 

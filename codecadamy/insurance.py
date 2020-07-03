@@ -11,7 +11,6 @@ class VehicleInsurance(InsurancePolicy):
         return self.price_of_insured_item * .001
 
 
-
 class HomeInsurance(InsurancePolicy):
     def get_rate(self):
         return self.price_of_insured_item * .00005

@@ -1,5 +1,4 @@
-('c:\\Users\\Kevin\\Desktop\\Code\\Coding '
- 'Practice\\codecadamy\\build\\games\\games.exe',
+('C:\\Users\\Kevin\\Desktop\\Code\\codingPractice\\codecadamy\\build\\games\\games.exe',
  True,
  False,
  True,
@@ -11,8 +10,7 @@
  True,
  'games.pkg',
  [('PYZ-00.pyz',
-   'c:\\Users\\Kevin\\Desktop\\Code\\Coding '
-   'Practice\\codecadamy\\build\\games\\PYZ-00.pyz',
+   'C:\\Users\\Kevin\\Desktop\\Code\\codingPractice\\codecadamy\\build\\games\\PYZ-00.pyz',
    'PYZ'),
   ('struct',
    'c:\\users\\kevin\\appdata\\local\\programs\\python\\python37-32\\lib\\struct.pyo',
@@ -30,16 +28,15 @@
    'c:\\users\\kevin\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
    'PYSOURCE'),
   ('games',
-   'c:\\Users\\Kevin\\Desktop\\Code\\Coding Practice\\codecadamy\\games.py',
+   'C:\\Users\\Kevin\\Desktop\\Code\\codingPractice\\codecadamy\\games.py',
    'PYSOURCE'),
   ('games.exe.manifest',
-   'c:\\Users\\Kevin\\Desktop\\Code\\Coding '
-   'Practice\\codecadamy\\build\\games\\games.exe.manifest',
+   'C:\\Users\\Kevin\\Desktop\\Code\\codingPractice\\codecadamy\\build\\games\\games.exe.manifest',
    'BINARY')],
  [],
  False,
  False,
- 1582138395,
+ 1585863349,
  [('run.exe',
    'c:\\users\\kevin\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-32bit\\run.exe',
    'EXECUTABLE')])
