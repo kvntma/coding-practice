@@ -44,10 +44,11 @@ const largestTimeFromDigits = (array) => {
     if (dif < currentDif && dif >= 0) {
       currentDif = dif;
       currentNumber = res[i];
+      console.log(currentNumber);
     } else if (currentDif == 9999) return [];
   }
 
-  const convert = (currentNumber) => {
+  const convert = (time) => {
     const m = time % 60;
     const m2 = m % 10;
     const m1 = (m - m2) / 10;
@@ -57,7 +58,7 @@ const largestTimeFromDigits = (array) => {
     return `${h1}${h2}:${m1}${m2}`;
   };
 
-  return convert();
+  return convert(currentNumber);
 };
 
 console.log(largestTimeFromDigits([1, 2, 3, 4]));
