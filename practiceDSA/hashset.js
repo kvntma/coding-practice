@@ -14,22 +14,14 @@ input = ["L>M", "P>A", "A>L"] output = "PALM"
 // once key = undefined (no more, you're done!)
 
 const returnWord = (arr) => {
-  let arrayed = [];
+  let arrayed = arr.map((letters) => letters.split(">"));
   let res = "";
-
-  const seperateLetters = (letters) => {
-    return letters.forEach((items) => {
-      arrayed.push(items.split(">"));
-    });
-  };
-
-  seperateLetters(arr);
 
   const hashmap = Object.fromEntries(arrayed);
 
-  let start = Object.keys(hashmap)
-    .filter((x) => !Object.values(hashmap).includes(x)) // compares keys to value sets and if a key is NOT in values we take that as the start
-    .toString();
+  let start = Object.keys(hashmap).filter(
+    (x) => !Object.values(hashmap).includes(x)
+  ); // compares keys to value sets and if a key is NOT in values we take that as the start
 
   while (start) {
     res += start;
