@@ -2,13 +2,11 @@ const linkedGraph = (array) => {
   const arrayed = array.map((element) => element.split(">"));
   let word = "";
 
-  console.log(arrayed);
-
   let hashedLetters = Object.fromEntries(arrayed);
 
-  let start = Object.keys(hashedLetters)
-    .filter((letter) => !Object.values(hashedLetters).includes(letter))
-    .toString();
+  let start = Object.keys(hashedLetters).filter(
+    (letter) => !Object.values(hashedLetters).includes(letter)
+  );
 
   while (start) {
     word += start;

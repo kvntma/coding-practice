@@ -14,6 +14,10 @@ Output: ""
 
 */
 const largestTimeFromDigits = (array) => {
+  if (array.reduce((a, b) => a + b) == 0) {
+    return "00:00";
+  }
+
   let res;
   const max = 2359;
   let currentDif = 9999;
@@ -38,26 +42,18 @@ const largestTimeFromDigits = (array) => {
   };
 
   res = perm(array);
+  console.log(res);
 
   for (i = 0; i <= res.length; i++) {
     let dif = max - res[i];
     if (dif < currentDif && dif >= 0) {
       currentDif = dif;
       currentNumber = res[i];
-    } else if (currentDif == 9999) return [];
+    } else if (currentDif == 9999) return "";
   }
-
-  const convert = (currentNumber) => {
-    const m = time % 60;
-    const m2 = m % 10;
-    const m1 = (m - m2) / 10;
-    const h = (time - m) / 60;
-    const h2 = h % 10;
-    const h1 = (h - h2) / 10;
-    return `${h1}${h2}:${m1}${m2}`;
-  };
-
-  return convert();
+  console.log(currentNumber);
+  currentNumber = currentNumber.toString();
+  return currentNumber.slice(0, 2) + ":" + currentNumber.slice(2, 4);
 };
 
-console.log(largestTimeFromDigits([1, 2, 3, 4]));
+console.log(largestTimeFromDigits([1, 0, 0, 0]));

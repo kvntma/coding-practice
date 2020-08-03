@@ -1,3 +1,10 @@
+//THe problem is a dynamic programming question.
+//Sometimes greedy algos can't solve this question properly.
+//Create a 2d Matrix and fill the first row and column with 0's (base case)
+//Check if coin can fit in value --> If it fits and there's leftover, look at the remaining
+//value's current best and add it to the value we currently hold.
+//Optimal answer should be on the bottom right after solving all the subproblems.
+
 const coinChange = (coins, amount) => {
   let dp = [...Array(amount + 1).fill(amount + 1)];
   coins.sort((a, b) => a - b);
