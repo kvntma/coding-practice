@@ -15,8 +15,7 @@ rl.on("line", (line) => {
     return;
   } else if (lineno <= tripsno) {
     let countryAndYear = line.split(" ");
-    let country = countryAndYear[0];
-    let year = countryAndYear[1];
+    let [country, year] = [countryAndYear[0], countryAndYear[1]];
     if (trips[country] == undefined) {
       trips[country] = [year];
     } else {

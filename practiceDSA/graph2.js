@@ -31,29 +31,23 @@ function addEdge(origin, destination) {
 // Create the Graph
 airports.forEach(addNode);
 routes.forEach((route) => addEdge(...route));
+let steps = 0;
 
-function bfs(start) {
-  const visited = new Set();
+const dfs = (start, end, visited = new Set()) => {
+  console.log(start);
+  visited.add(start);
+  steps++;
+  const destinations = adjacencyList.get(start);
 
-  const queue = [start];
-
-  while (queue.length > 0) {
-    const airport = queue.shift(); // mutates the queue
-
-    const destinations = adjacencyList.get(airport);
-
-    for (const destination of destinations) {
-      if (destination === "BKK") {
-        console.log(`BFS found Bangkok!`);
-      }
-
-      if (!visited.has(destination)) {
-        visited.add(destination);
-        queue.push(destination);
-        console.log(destination);
-      }
+  for (const destination of destinations) {
+    if (destination == end) {
+      console.log(`${end} has been found in ${steps} steps!`);
+      return;
+    }
+    if (!visited.has(destination)) {
+      dfs(destination, end, visited);
     }
   }
-}
+};
 
-bfs("PHX");
+dfs("PHX", "BKK");
