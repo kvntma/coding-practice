@@ -1,6 +1,6 @@
 class Node {
   constructor(value) {
-    this.parent = value;
+    this.value = value;
     this.left = null;
     this.right = null;
   }
@@ -123,13 +123,14 @@ class BST {
     queue.push(this.root);
 
     while (queue.length) {
-      currentNode = queue.shift();
+      let currentNode = queue.shift();
 
-      result.push(currentNode);
+      result.push(currentNode.value);
 
       if (currentNode.left) {
         queue.push(currentNode.left);
-      } else if (currentNode.right) {
+      }
+      if (currentNode.right) {
         queue.push(currentNode.right);
       }
     }
@@ -150,3 +151,4 @@ bst.insert(39);
 console.log(bst);
 
 console.log(bst.contains(2));
+console.log(bst.bfs());
