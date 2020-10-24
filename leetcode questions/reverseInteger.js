@@ -4,7 +4,7 @@ const reverse = (x) => {
   if (x < 0) {
     x = Math.abs(x);
     negative = true;
-  }
+  } 
   while (x > 0) {
     digits.push(x % 10);
     x = parseInt(x / 10);

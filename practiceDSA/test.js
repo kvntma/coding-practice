@@ -1,19 +1,17 @@
-const linkedGraph = (array) => {
-  const arrayed = array.map((element) => element.split(">"));
+const findWord = (array) => {
   let word = "";
+  array = array.map((x) => x.split(">"));
+  console.log(array)
+  let hmap = Object.fromEntries(array);
+  console.log(hmap)
 
-  let hashedLetters = Object.fromEntries(arrayed);
-
-  let start = Object.keys(hashedLetters).filter(
-    (letter) => !Object.values(hashedLetters).includes(letter)
-  );
+  let start = Object.keys(hmap).filter((x) => !Object.values(hmap).includes(x));
 
   while (start) {
     word += start;
-    start = hashedLetters[start];
+    start = hmap[start];
   }
-
   return word;
 };
 
-console.log(linkedGraph(["L>M", "P>A", "A>L"]));
+console.log(findWord(["L>M", "P>A", "A>L"]));

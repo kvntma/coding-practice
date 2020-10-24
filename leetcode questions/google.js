@@ -49,29 +49,11 @@ const largestTimeFromDigits = (array) => {
     if (dif < currentDif && dif >= 0) {
       currentDif = dif;
       currentNumber = res[i];
-<<<<<<< HEAD
-      console.log(currentNumber);
-    } else if (currentDif == 9999) return [];
-  }
-
-  const convert = (time) => {
-    const m = time % 60;
-    const m2 = m % 10;
-    const m1 = (m - m2) / 10;
-    const h = (time - m) / 60;
-    const h2 = h % 10;
-    const h1 = (h - h2) / 10;
-    return `${h1}${h2}:${m1}${m2}`;
-  };
-
-  return convert(currentNumber);
-=======
     } else if (currentDif == 9999) return "";
   }
   console.log(currentNumber);
   currentNumber = currentNumber.toString();
   return currentNumber.slice(0, 2) + ":" + currentNumber.slice(2, 4);
->>>>>>> adc5df127cb096732b05366a195cc15374b02206
 };
 
 console.log(largestTimeFromDigits([1, 0, 0, 0]));

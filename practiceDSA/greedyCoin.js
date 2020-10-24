@@ -10,8 +10,8 @@ function greedyCoin(amount, denominations) {
     return coins.sort((a, b) => b - a);
   };
 
-  let totalCoins = [];
-  const sortedCoins = sortDescending(denominations);
+  let totalCoins = []; //answer
+  const sortedCoins = sortDescending(denominations); //sort coins by descending order
 
   sortedCoins.forEach((coin) => {
     while (amount >= coin) {
